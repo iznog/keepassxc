@@ -109,6 +109,14 @@
 }
 
 //
+// Does this version of macOS have Dark Mode?
+//
+- (bool) hasDarkMode
+{
+    return @available(macOS 10.14, *);
+}
+
+//
 // Notification for user switch
 //
 - (void) userSwitchHandler:(NSNotification*) notification
@@ -214,6 +222,11 @@ bool AppKit::isHidden(pid_t pid)
 bool AppKit::isDarkMode()
 {
     return [static_cast<id>(self) isDarkMode];
+}
+
+bool AppKit::hasDarkMode()
+{
+    return [static_cast<id>(self) hasDarkMode];
 }
 
 bool AppKit::enableAccessibility()

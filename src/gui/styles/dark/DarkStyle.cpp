@@ -105,7 +105,7 @@ void DarkStyle::polish(QWidget* widget)
         || qobject_cast<QToolBar*>(widget)) {
         auto palette = widget->palette();
 #if defined(Q_OS_MACOS)
-        if (osUtils->isDarkMode()) {
+        if (macUtils()->hasDarkMode() && osUtils->isDarkMode()) {
             // Let the Cocoa platform plugin draw its own background
             palette.setColor(QPalette::All, QPalette::Window, Qt::transparent);
         } else {

@@ -34,6 +34,7 @@ public:
     static MacUtils* instance();
 
     bool isDarkMode() const override;
+    bool hasDarkMode() const;
     bool isLaunchAtStartupEnabled() const override;
     void setLaunchAtStartup(bool enable) override;
     bool isCapslockEnabled() override;

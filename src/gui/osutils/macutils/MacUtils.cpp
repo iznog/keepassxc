@@ -93,6 +93,11 @@ bool MacUtils::isDarkMode() const
     return m_appkit->isDarkMode();
 }
 
+bool MacUtils::hasDarkMode() const
+{
+    return m_appkit->hasDarkMode();
+}
+
 QString MacUtils::getLaunchAgentFilename() const
 {
     auto launchAgentDir = QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/../LaunchAgents"));
